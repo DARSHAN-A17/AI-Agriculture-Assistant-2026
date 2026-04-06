@@ -1,0 +1,14 @@
+<resources>
+    <string name="welcome_back">తిరిగి స్వాగతం</string>
+    <string name="login">లాగిన్</string>
+    <string name="register">నమోదు</string>
+    <string name="create_account">ఖాతాను సృష్టించండి</string>
+    <string name="plant_disease_detection">పంట రోగ నిర్ధారణ</string>
+    <string name="soil_image_analysis">నేల రకం విశ్లేషణ</string>
+    <string name="soil_nutrient_analysis">నేల పోషకాల విశ్లేషణ</string>
+    <string name="view_reports">నా నివేదికలు</string>
+    <string name="profile">ప్రొఫైల్</string>
+    <string name="logout">లాగ్ అవుట్</string>
+    <string name="save">మార్పులను సేవ్ చేయండి</string>
+    <string name="language">భాష</string>
+</resources>

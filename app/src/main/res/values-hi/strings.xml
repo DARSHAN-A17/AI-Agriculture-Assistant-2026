@@ -1,0 +1,14 @@
+<resources>
+    <string name="welcome_back">नमस्ते फिर से आपका स्वागत है</string>
+    <string name="login">लॉगिन</string>
+    <string name="register">पंजीकरण</string>
+    <string name="create_account">खाता बनाएँ</string>
+    <string name="plant_disease_detection">फसल रोग पहचान</string>
+    <string name="soil_image_analysis">मिट्टी प्रकार विश्लेषण</string>
+    <string name="soil_nutrient_analysis">मिट्टी पोषक तत्व विश्लेषण</string>
+    <string name="view_reports">मेरी रिपोर्ट</string>
+    <string name="profile">प्रोफ़ाइल</string>
+    <string name="logout">लॉग आउट</string>
+    <string name="save">परिवर्तन सुरक्षित करें</string>
+    <string name="language">भाषा</string>
+</resources>

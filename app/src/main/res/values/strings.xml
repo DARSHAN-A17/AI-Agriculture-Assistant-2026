@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">AI Agri Assistant</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="create_account">Create Account</string>
+    <string name="dont_have_account">Don\'t have an account? Register</string>
+    <string name="already_have_account">Already have an account? Login</string>
+    
+    <string name="name">Full Name</string>
+    <string name="phone">Phone Number</string>
+    <string name="location">Location / City</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    
+    <string name="plant_disease_detection">Crop Disease Detection</string>
+    <string name="soil_image_analysis">Soil Type Analysis</string>
+    <string name="soil_nutrient_analysis">Soil Nutrient Analysis</string>
+    <string name="view_reports">My Reports</string>
+    <string name="profile">Profile</string>
+    
+    <string name="capture_image">Take Photo</string>
+    <string name="upload_gallery">Upload Gallery</string>
+    <string name="analyze">Analyze Now</string>
+    <string name="save_report">Save Report</string>
+    
+    <string name="nitrogen">Nitrogen (N)</string>
+    <string name="phosphorus">Phosphorus (P)</string>
+    <string name="potassium">Potassium (K)</string>
+    <string name="soil_ph">Soil pH</string>
+    <string name="moisture">Moisture (%)</string>
+    <string name="analyze_soil">Analyze Soil</string>
+    <string name="enter_soil_parameters">Enter Soil Parameters</string>
+    
+    <string name="reports">Reports</string>
+    <string name="plant_reports">Plants</string>
+    <string name="soil_reports">Soil</string>
+    <string name="history">History</string>
+    <string name="no_reports">No reports found.</string>
+    
+    <string name="logout">Logout</string>
+    <string name="save">Save Changes</string>
+    <string name="language">Language</string>
+</resources>

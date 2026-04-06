@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#2E7D32</color>
+    <color name="primary_dark">#1B5E20</color>
+    <color name="primary_light">#4CAF50</color>
+    <color name="accent">#FFAB40</color>
+    
+    <color name="background">#F5F7FA</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="input_bg">#EDF2F7</color>
+    
+    <color name="text_primary">#2D3748</color>
+    <color name="text_secondary">#718096</color>
+    <color name="text_on_primary">#FFFFFF</color>
+    
+    <color name="divider">#E2E8F0</color>
+    <color name="splash_bg">#2E7D32</color>
+    
+    <color name="status_success">#48BB78</color>
+    <color name="status_warning">#ECC94B</color>
+    <color name="status_danger">#F56565</color>
+    
+    <color name="card_plant">#E8F5E9</color>
+    <color name="card_soil_image">#EFEBE9</color>
+    <color name="card_soil_nutrient">#E3F2FD</color>
+    <color name="card_reports">#FFF3E0</color>
+    <color name="card_profile">#F3E5F5</color>
+</resources>

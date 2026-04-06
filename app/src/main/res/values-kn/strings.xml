@@ -1,0 +1,14 @@
+<resources>
+    <string name="welcome_back">ಮತ್ತೆ ಸುಸ್ವಾಗತ</string>
+    <string name="login">ಲಾಗಿನ್</string>
+    <string name="register">ನೋಂದಣಿ</string>
+    <string name="create_account">ಖಾತೆ ರಚಿಸಿ</string>
+    <string name="plant_disease_detection">ಬೆಳೆ ರೋಗ ಪತ್ತೆ</string>
+    <string name="soil_image_analysis">ಮಣ್ಣಿನ ವಿಧ ವಿಶ್ಲೇಷಣೆ</string>
+    <string name="soil_nutrient_analysis">ಮಣ್ಣಿನ ಪೋಷಕಾಂಶ ವಿಶ್ಲೇಷಣೆ</string>
+    <string name="view_reports">ನನ್ನ ವರದಿಗಳು</string>
+    <string name="profile">ಪ್ರೊಫೈಲ್</string>
+    <string name="logout">ಲಾಗ್ ಔಟ್</string>
+    <string name="save">ಬದಲಾವಣೆಗಳನ್ನು ಉಳಿಸಿ</string>
+    <string name="language">ಭಾಷೆ</string>
+</resources>

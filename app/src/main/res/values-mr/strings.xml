@@ -1,0 +1,14 @@
+<resources>
+    <string name="welcome_back">पुन्हा स्वागत आहे</string>
+    <string name="login">लॉगिन</string>
+    <string name="register">नोंदणी</string>
+    <string name="create_account">खाते तयार करा</string>
+    <string name="plant_disease_detection">पीक रोग ओळख</string>
+    <string name="soil_image_analysis">माती प्रकार विश्लेषण</string>
+    <string name="soil_nutrient_analysis">माती पोषक तत्व विश्लेषण</string>
+    <string name="view_reports">माझे अहवाल</string>
+    <string name="profile">प्रोफाइल</string>
+    <string name="logout">लॉग आउट</string>
+    <string name="save">बदल जतन करा</string>
+    <string name="language">भाषा</string>
+</resources>

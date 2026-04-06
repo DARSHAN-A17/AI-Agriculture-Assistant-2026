@@ -1,0 +1,14 @@
+<resources>
+    <string name="welcome_back">மீண்டும் வருக</string>
+    <string name="login">உள்நுழை</string>
+    <string name="register">பதிவு செய்</string>
+    <string name="create_account">கணக்கை உருவாக்கு</string>
+    <string name="plant_disease_detection">பயிர் நோய் கண்டறிதல்</string>
+    <string name="soil_image_analysis">மண் வகை பகுப்பாய்வு</string>
+    <string name="soil_nutrient_analysis">மண் ஊட்டச்சத்து பகுப்பாய்வு</string>
+    <string name="view_reports">எனது அறிக்கைகள்</string>
+    <string name="profile">சுயவிவரம்</string>
+    <string name="logout">வெளியேறு</string>
+    <string name="save">மாற்றங்களைச் சேமி</string>
+    <string name="language">மொழி</string>
+</resources>
