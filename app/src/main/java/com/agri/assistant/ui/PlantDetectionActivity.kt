@@ -24,6 +24,7 @@ import com.agri.assistant.ml.PlantDiseaseClassifier
 import com.agri.assistant.model.HistoryItem
 import com.agri.assistant.model.PlantReport
 import com.agri.assistant.utils.ImageUtils
+import com.agri.assistant.utils.PdfUtils
 import com.agri.assistant.utils.SessionManager
 import com.google.android.material.button.MaterialButton
 import java.io.File
@@ -215,6 +216,8 @@ class PlantDetectionActivity : AppCompatActivity() {
                 )
             )
             Toast.makeText(this, getString(R.string.report_saved), Toast.LENGTH_SHORT).show()
+            // Export to PDF
+            PdfUtils.exportPlantReport(this, report)
         }
     }
 

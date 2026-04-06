@@ -13,6 +13,7 @@ import com.agri.assistant.ml.SoilNutrientAnalyzer
 import com.agri.assistant.model.HistoryItem
 import com.agri.assistant.model.SoilReport
 import com.agri.assistant.utils.ImageUtils
+import com.agri.assistant.utils.PdfUtils
 import com.agri.assistant.utils.SessionManager
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
@@ -112,6 +113,7 @@ class SoilNutrientActivity : AppCompatActivity() {
                 )
             )
             Toast.makeText(this, getString(R.string.report_saved), Toast.LENGTH_SHORT).show()
+            PdfUtils.exportSoilReport(this, report)
         }
     }
 }

@@ -21,6 +21,7 @@ import com.agri.assistant.ml.SoilImageClassifier
 import com.agri.assistant.model.HistoryItem
 import com.agri.assistant.model.SoilReport
 import com.agri.assistant.utils.ImageUtils
+import com.agri.assistant.utils.PdfUtils
 import com.agri.assistant.utils.SessionManager
 import com.google.android.material.button.MaterialButton
 import java.io.File
@@ -184,6 +185,7 @@ class SoilImageActivity : AppCompatActivity() {
                 )
             )
             Toast.makeText(this, getString(R.string.report_saved), Toast.LENGTH_SHORT).show()
+            PdfUtils.exportSoilReport(this, report)
         }
     }
 

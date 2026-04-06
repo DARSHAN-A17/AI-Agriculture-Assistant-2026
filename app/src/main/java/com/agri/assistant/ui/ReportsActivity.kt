@@ -124,6 +124,17 @@ class ReportsActivity : AppCompatActivity() {
             } else {
                 holder.ivImage.setImageResource(R.drawable.ic_plant)
             }
+
+            holder.itemView.setOnClickListener {
+                com.google.android.material.dialog.MaterialAlertDialogBuilder(holder.itemView.context)
+                    .setTitle("🌱 ${report.plantName} Analysis")
+                    .setMessage("Disease: ${report.diseaseName}\n\nDescription:\n${report.diseaseDescription}\n\nCause:\n${report.cause}\n\nTreatment:\n${report.treatment}\n\nPrevention:\n${report.prevention}")
+                    .setPositiveButton("Close", null)
+                    .setNeutralButton("Download PDF") { _, _ ->
+                        com.agri.assistant.utils.PdfUtils.exportPlantReport(holder.itemView.context, report)
+                    }
+                    .show()
+            }
         }
 
         override fun getItemCount() = reports.size
@@ -156,6 +167,17 @@ class ReportsActivity : AppCompatActivity() {
                 holder.ivImage.setImageBitmap(bitmap)
             } else {
                 holder.ivImage.setImageResource(R.drawable.ic_soil)
+            }
+
+            holder.itemView.setOnClickListener {
+                com.google.android.material.dialog.MaterialAlertDialogBuilder(holder.itemView.context)
+                    .setTitle("🏔️ ${report.soilType}")
+                    .setMessage("Status: ${report.nutrientStatus}\n\nRecommendations:\n${report.recommendation}\n\nSuitable Crops:\n${report.suitableCrops}")
+                    .setPositiveButton("Close", null)
+                    .setNeutralButton("Download PDF") { _, _ ->
+                        com.agri.assistant.utils.PdfUtils.exportSoilReport(holder.itemView.context, report)
+                    }
+                    .show()
             }
         }
 
