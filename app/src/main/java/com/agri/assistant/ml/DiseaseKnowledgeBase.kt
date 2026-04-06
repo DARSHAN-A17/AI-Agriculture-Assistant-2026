@@ -1,7 +1,5 @@
 package com.agri.assistant.ml
 
-import android.content.Context
-
 /**
  * Knowledge base for plant diseases detected by the CNN model.
  * Maps each PlantVillage class label to disease info, cause, treatment, and prevention.
@@ -58,7 +56,7 @@ object DiseaseKnowledgeBase {
             treatment = "No treatment needed.",
             prevention = "Maintain acidic soil pH (4.5-5.5), regular mulching, and proper irrigation."
         ),
-        "Cherry_(including_sour)___Powdery_mildew" to DiseaseInfo(
+        "Cherry___Powdery_mildew" to DiseaseInfo(
             plantName = "Cherry",
             diseaseName = "Powdery Mildew",
             description = "White powdery patches on leaves, shoots, and occasionally fruit. Leaves may curl and become distorted.",
@@ -66,7 +64,7 @@ object DiseaseKnowledgeBase {
             treatment = "Apply sulfur-based or potassium bicarbonate fungicides. Use neem oil. Remove severely infected parts.",
             prevention = "Ensure good air circulation. Avoid overhead watering. Plant resistant varieties."
         ),
-        "Cherry_(including_sour)___healthy" to DiseaseInfo(
+        "Cherry___healthy" to DiseaseInfo(
             plantName = "Cherry",
             diseaseName = "Healthy",
             description = "The cherry leaf appears healthy with no signs of disease.",
@@ -74,7 +72,7 @@ object DiseaseKnowledgeBase {
             treatment = "No treatment needed.",
             prevention = "Regular pruning, balanced fertilization, and appropriate watering."
         ),
-        "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot" to DiseaseInfo(
+        "Corn___Cercospora_leaf_spot Gray_leaf_spot" to DiseaseInfo(
             plantName = "Corn (Maize)",
             diseaseName = "Gray Leaf Spot",
             description = "Rectangular gray-brown lesions on leaves that follow leaf veins. Can cause significant yield loss.",
@@ -82,7 +80,7 @@ object DiseaseKnowledgeBase {
             treatment = "Apply foliar fungicides (Strobilurin or Triazole). Remove crop residue after harvest.",
             prevention = "Rotate crops. Plant resistant hybrids. Manage crop residue through tillage."
         ),
-        "Corn_(maize)___Common_rust_" to DiseaseInfo(
+        "Corn___Common_rust" to DiseaseInfo(
             plantName = "Corn (Maize)",
             diseaseName = "Common Rust",
             description = "Small, circular to elongated brown-red pustules on both leaf surfaces. Can reduce photosynthesis significantly.",
@@ -90,7 +88,7 @@ object DiseaseKnowledgeBase {
             treatment = "Apply Mancozeb or Propiconazole fungicide if infection is severe. Usually no treatment needed for light cases.",
             prevention = "Plant rust-resistant hybrids. Early planting can help avoid peak spore periods."
         ),
-        "Corn_(maize)___Northern_Leaf_Blight" to DiseaseInfo(
+        "Corn___Northern_Leaf_Blight" to DiseaseInfo(
             plantName = "Corn (Maize)",
             diseaseName = "Northern Leaf Blight",
             description = "Large, cigar-shaped gray-green lesions on leaves. Severe cases can reduce yields by up to 50%.",
@@ -98,7 +96,7 @@ object DiseaseKnowledgeBase {
             treatment = "Apply Azoxystrobin or Propiconazole fungicides. Time application before tasseling.",
             prevention = "Plant resistant hybrids. Rotate to non-host crops. Manage residue."
         ),
-        "Corn_(maize)___healthy" to DiseaseInfo(
+        "Corn___healthy" to DiseaseInfo(
             plantName = "Corn (Maize)",
             diseaseName = "Healthy",
             description = "The corn leaf appears healthy.",
