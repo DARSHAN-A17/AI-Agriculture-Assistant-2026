@@ -1,153 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/background">
 
-    <include layout="@layout/toolbar_main" />
-
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+            <ImageView android:id="@+id/btnBack"
+                android:layout_width="36dp" android:layout_height="36dp"
+                android:src="@drawable/ic_back" android:padding="4dp"
+                android:contentDescription="Back" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginStart="12dp"
+                android:text="@string/soil_image_analysis" style="@style/ScreenTitle" />
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="250dp"
+            app:cardCornerRadius="16dp" app:cardElevation="2dp">
+            <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageView android:id="@+id/ivPreview"
+                    android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:scaleType="centerCrop" android:contentDescription="Preview" />
+                <TextView android:id="@+id/tvPlaceholder"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="📷 Capture or upload soil image"
+                    android:textColor="@color/text_secondary" android:textSize="15sp" />
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnCamera"
+                style="@style/SecondaryButton" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_marginEnd="8dp" android:text="@string/capture_image" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnGallery"
+                style="@style/SecondaryButton" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_marginStart="8dp" android:text="@string/upload_gallery" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnAnalyze"
+            style="@style/PrimaryButton" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="12dp"
+            android:text="@string/analyze" />
+
+        <ProgressBar android:id="@+id/progressBar"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center" android:layout_marginTop="12dp"
+            android:visibility="gone" />
+
+        <LinearLayout android:id="@+id/resultSection"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:visibility="gone"
+            android:layout_marginTop="20dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Soil Analysis Result" style="@style/SectionTitle" />
 
             <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="4dp">
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp" app:cardElevation="2dp"
+                android:layout_marginTop="8dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="16dp">
 
-                <ImageView
-                    android:id="@+id/ivSoilImage"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/ic_camera"
-                    android:padding="64dp"
-                    android:alpha="0.5"/>
+                    <TextView android:id="@+id/tvSoilType"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textSize="20sp" android:textStyle="bold"
+                        android:textColor="@color/primary_dark" />
+
+                    <TextView android:id="@+id/tvConfidence"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp" android:textSize="14sp"
+                        android:textColor="@color/text_secondary" />
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp"
+                        android:layout_marginVertical="12dp" android:background="@color/divider" />
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="📋 Description" android:textSize="15sp"
+                        android:textStyle="bold" android:textColor="@color/text_primary" />
+                    <TextView android:id="@+id/tvDescription"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp" android:textSize="14sp"
+                        android:textColor="@color/text_secondary" />
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp" android:text="📊 Characteristics"
+                        android:textSize="15sp" android:textStyle="bold"
+                        android:textColor="@color/text_primary" />
+                    <TextView android:id="@+id/tvCharacteristics"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp" android:textSize="14sp"
+                        android:textColor="@color/text_secondary" />
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp" android:text="🌾 Suitable Crops"
+                        android:textSize="15sp" android:textStyle="bold"
+                        android:textColor="@color/text_primary" />
+                    <TextView android:id="@+id/tvCrops"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp" android:textSize="14sp"
+                        android:textColor="@color/text_secondary" />
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp" android:text="🔧 Improvements"
+                        android:textSize="15sp" android:textStyle="bold"
+                        android:textColor="@color/text_primary" />
+                    <TextView android:id="@+id/tvImprovements"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp" android:textSize="14sp"
+                        android:textColor="@color/text_secondary" />
+                </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:orientation="horizontal"
-                android:gap="8dp">
-
-                <Button
-                    android:id="@+id/btnCapture"
-                    style="@style/SecondaryButton"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/capture_image"
-                    app:icon="@drawable/ic_camera" />
-
-                <Button
-                    android:id="@+id/btnGallery"
-                    style="@style/SecondaryButton"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/upload_gallery"
-                    app:icon="@drawable/ic_gallery" />
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/btnAnalyze"
-                style="@style/PrimaryButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/analyze" />
-
-            <!-- Result Section -->
-            <LinearLayout
-                android:id="@+id/layoutResult"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="gone"
-                android:layout_marginTop="24dp">
-
-                <TextView
-                    style="@style/SectionTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/result" />
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="2dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="16dp">
-
-                        <TextView
-                            android:id="@+id/tvSoilType"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/primary_dark" />
-
-                        <TextView
-                            android:id="@+id/tvConfidence"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:textColor="@color/text_secondary" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:text="@string/soil_characteristics"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/tvCharacteristics"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp"
-                            android:text="@string/suitable_crops"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/tvSuitableCrops"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp" />
-
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-                <Button
-                    android:id="@+id/btnSaveReport"
-                    style="@style/AccentButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/save_report" />
-            </LinearLayout>
-
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSaveReport"
+                style="@style/AccentButton" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp" android:text="@string/save_report" />
         </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
