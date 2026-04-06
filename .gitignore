@@ -1,0 +1,13 @@
+# IDE/Build artifacts
+.gradle/
+build/
+*.apk
+*.h5
+node_modules/
+.idea/
+*.iml
+local.properties
+.DS_Store
+captures/
+.externalNativeBuild/
+google-services.json
